@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Alice Number Game</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+<!-- SPLASH SCREEN -->
+
+<div id="splashScreen">
+
+  <img src="intro.jpg"
+  id="splashImage">
+
+</div>
+  <!-- START -->
+  <div id="startScreen" class="screen">
+
+    <h1>ALICE NUMBER GAME</h1>
+
+    <p class="author">BY DERID</p>
+<p class="warningText">
+
+  IF YOU FAIL,<br>
+  YOU DIE.
+
+</p>
+    <button onclick="showPlayerSetup()">
+      START GAME
+    </button>
+
+  </div>
+
+  <!-- PLAYER SETUP -->
+  <div id="playerSetup" class="screen hidden">
+
+    <h2>INPUT PLAYER</h2>
+
+    <input
+    type="text"
+    id="playerInput"
+    placeholder="Masukkan Nama">
+
+    <br>
+
+    <button onclick="addPlayer()">
+      TAMBAH
+    </button>
+
+    <div id="playerList"></div>
+
+    <button
+    id="beginBtn"
+    class="hidden"
+    onclick="startGame()">
+
+      MULAI GAME
+
+    </button>
+
+  </div>
+
+  <!-- GAME -->
+  <div id="gameScreen" class="screen hidden">
+
+    <h2 id="turnText"></h2>
+
+    <p>PILIH ANGKA 0 - 100</p>
+
+    <input
+    type="number"
+    id="numberInput"
+    min="0"
+    max="100">
+
+    <br>
+
+    <button onclick="submitNumber()">
+      KIRIM ANGKA
+    </button>
+
+  </div>
+
+  <!-- RESULT -->
+  <div id="resultScreen" class="screen hidden">
+
+    <h1>MENGHITUNG HASIL</h1>
+
+    <p>HARAP TUNGGU...</p>
+
+    <div class="loader"></div>
+
+    <div id="finalResult"></div>
+
+  </div>
+<audio
+id="bgMusic"
+loop>
+
+  <source
+  src="music/bgmusic.mp3"
+  type="audio/mp3">
+
+</audio>
+  <script src="script.js"></script>
+
+</body>
+</html>

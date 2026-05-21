@@ -1,0 +1,471 @@
+body{
+
+  margin:0;
+  padding:0;
+
+  background:black;
+
+  color:white;
+
+  font-family:'Orbitron', sans-serif;
+
+  text-align:center;
+}
+
+/* HIDDEN */
+
+.hidden{
+  display:none;
+}
+
+/* SCREEN */
+
+.screen{
+
+  max-width:500px;
+
+  margin:auto;
+
+  margin-top:40px;
+
+  padding:40px;
+
+  border:3px solid red;
+
+  background:#120000;
+
+  box-shadow:
+  0 0 20px red;
+
+  border-radius:20px;
+}
+
+/* TITLE */
+
+h1{
+
+  color:red;
+
+  font-size:60px;
+
+  text-shadow:
+  0 0 20px red;
+}
+
+.author{
+
+  color:red;
+
+  margin-bottom:40px;
+}
+
+/* INPUT */
+
+input{
+
+  padding:15px;
+
+  width:250px;
+
+  margin-top:20px;
+
+  background:black;
+
+  border:2px solid red;
+
+  color:red;
+
+  font-size:25px;
+
+  text-align:center;
+
+  font-family:'Orbitron', sans-serif;
+}
+
+/* NUMBER */
+
+#numberInput{
+
+  height:120px;
+
+  font-size:70px;
+
+  text-shadow:
+  0 0 20px red;
+}
+
+/* BUTTON */
+
+button{
+
+  padding:15px 40px;
+
+  margin-top:20px;
+
+  background:#700000;
+
+  border:2px solid red;
+
+  color:white;
+
+  font-size:20px;
+
+  cursor:pointer;
+
+  font-family:'Orbitron', sans-serif;
+
+  box-shadow:
+  0 0 10px red;
+}
+
+button:hover{
+
+  background:red;
+}
+
+/* PLAYER */
+
+.playerName{
+
+  margin:10px;
+
+  color:red;
+}
+
+/* LOADER */
+
+.loader{
+
+  width:120px;
+  height:120px;
+
+  border:8px solid #300000;
+
+  border-top:8px solid red;
+
+  border-radius:50%;
+
+  margin:auto;
+
+  animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+
+  0%{
+    transform:rotate(0deg);
+  }
+
+  100%{
+    transform:rotate(360deg);
+  }
+}
+
+/* RESULT PLAYER */
+
+.resultContainer{
+
+  display:flex;
+
+  justify-content:center;
+
+  gap:20px;
+
+  flex-wrap:wrap;
+
+  margin-top:30px;
+}
+
+.playerCard{
+
+  border:2px solid red;
+
+  padding:20px;
+
+  min-width:120px;
+
+  background:#111;
+
+  box-shadow:
+  0 0 15px red;
+}
+
+.playerCard p{
+
+  font-size:50px;
+
+  color:red;
+}
+
+/* WINNER */
+
+.winner{
+
+  background:white;
+
+  color:black;
+
+  transform:scale(1.1);
+
+  box-shadow:
+  0 0 30px white;
+}
+
+.winner p{
+
+  color:black;
+}
+/* SPLASH SCREEN */
+
+#splashScreen{
+
+  position:fixed;
+
+  top:0;
+  left:0;
+
+  width:100%;
+  height:100%;
+
+  background:black;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  z-index:9999;
+
+  animation:fadeOut 3s forwards;
+
+  animation-delay:3s;
+}
+
+/* IMAGE */
+
+#splashImage{
+
+  width:100%;
+
+  height:100%;
+
+  object-fit:cover;
+
+  opacity:0;
+
+  animation:fadeIn 2s forwards;
+}
+
+/* FADE IN */
+
+@keyframes fadeIn{
+
+  from{
+    opacity:0;
+  }
+
+  to{
+    opacity:1;
+  }
+}
+
+/* FADE OUT */
+
+@keyframes fadeOut{
+
+  to{
+
+    opacity:0;
+
+    visibility:hidden;
+  }
+  
+}
+/* MOBILE VERSION */
+
+@media screen and (max-width: 768px){
+
+  .screen{
+
+    width:90%;
+
+    padding:20px;
+
+    margin-top:20px;
+  }
+
+  h1{
+
+    font-size:35px;
+  }
+
+  h2{
+
+    font-size:20px;
+  }
+
+  h3{
+
+    font-size:18px;
+  }
+
+  p{
+
+    font-size:14px;
+  }
+
+  input{
+
+    width:80%;
+
+    font-size:20px;
+  }
+
+  #numberInput{
+
+    width:80%;
+
+    height:90px;
+
+    font-size:50px;
+  }
+
+  button{
+
+    width:80%;
+
+    font-size:18px;
+
+    padding:15px;
+  }
+
+  .resultContainer{
+
+    flex-direction:column;
+
+    align-items:center;
+  }
+
+  .playerCard{
+
+    width:80%;
+  }
+
+  .loader{
+
+    width:90px;
+    height:90px;
+  }
+}
+/* MOBILE VERSION */
+
+@media screen and (max-width: 768px){
+
+  .screen{
+
+    width:90%;
+
+    padding:20px;
+
+    margin-top:20px;
+  }
+
+  h1{
+
+    font-size:35px;
+  }
+
+  h2{
+
+    font-size:20px;
+  }
+
+  h3{
+
+    font-size:18px;
+  }
+
+  p{
+
+    font-size:14px;
+  }
+
+  input{
+
+    width:80%;
+
+    font-size:20px;
+  }
+
+  #numberInput{
+
+    width:80%;
+
+    height:90px;
+
+    font-size:50px;
+  }
+
+  button{
+
+    width:80%;
+
+    font-size:18px;
+
+    padding:15px;
+  }
+
+  .resultContainer{
+
+    flex-direction:column;
+
+    align-items:center;
+  }
+
+  .playerCard{
+
+    width:80%;
+  }
+
+  .loader{
+
+    width:90px;
+    height:90px;
+  }
+}
+.warningText{
+
+  color:red;
+
+  font-size:28px;
+
+  letter-spacing:5px;
+
+  margin-bottom:40px;
+
+  text-shadow:
+  0 0 15px red;
+
+  animation:pulse 1.5s infinite;
+}
+
+/* ANIMATION */
+
+@keyframes pulse{
+
+  0%{
+
+    opacity:0.5;
+  }
+
+  50%{
+
+    opacity:1;
+  }
+
+  100%{
+
+    opacity:0.5;
+  }
+}
